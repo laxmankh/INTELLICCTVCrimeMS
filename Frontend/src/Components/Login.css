@@ -1,0 +1,50 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* This will center the login-box vertically if the container has some height/padding */
+    /* height: 100vh; Removed to prevent full-screen takeover */
+    /* background-color: #f4f4f4; Removed to use the parent's background */
+    padding: 2rem 0; /* Added some padding to give space around the login box */
+  }
+  
+  .login-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding and border don't cause overflow */
+  }
+  
+  .login-box button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-box button:hover {
+    background: #0056b3;
+  }
+  
+  .message {
+    margin-top: 10px;
+    color: green;
+  }
+  

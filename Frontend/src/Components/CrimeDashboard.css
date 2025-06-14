@@ -1,0 +1,52 @@
+.crime-dashboard {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .button-group {
+    margin-bottom: 20px;
+  }
+  
+  .crime-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .crime-button:hover {
+    background: #0056b3;
+  }
+  
+  .crime-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .crime-table th, .crime-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .crime-table th {
+    background: #007bff;
+    color: white;
+  }
+  
+  .crime-table tr:nth-child(even) {
+    background: #f2f2f2;
+  }
+  
+  .crime-table tr:hover {
+    background: #ddd;
+  }
+  

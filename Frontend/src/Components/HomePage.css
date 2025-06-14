@@ -1,0 +1,160 @@
+/* /home/admin1/Downloads/Reactproject-main/src/Components/HomePage.css */
+
+/* General body styles (optional, but good practice) */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+}
+
+.home-container {
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  background-color: #2c3e50; /* Fallback/base color, similar to navbar's dark blue-grey */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps background fixed during scroll */
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: rgba(44, 62, 80, 0.9); /* Dark blue-grey with slight transparency */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* Makes navbar sticky */
+  top: 0;
+  z-index: 1000; /* Ensures navbar stays on top */
+}
+
+.navbar .nav-brand {
+  color: #ecf0f1; /* Light grey */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-brand:hover {
+  color: #3498db; /* A pleasant blue for hover */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Vertically align items if button and links have different heights */
+  gap: 1.5rem; /* Spacing between nav items */
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a { /* Styling for NavLink */
+  color: #ecf0f1; /* Light grey */
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #3498db; /* A pleasant blue for hover */
+  color: #fff;
+}
+
+.navbar a.active-link { /* Class for active NavLink */
+  background-color: #2980b9; /* A slightly darker blue for active */
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar .nav-button-logout {
+  background-color: #e74c3c; /* Red for logout */
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem; /* Match NavLink padding */
+  border-radius: 5px; /* Match NavLink border-radius */
+  cursor: pointer;
+  font-size: 1rem; /* Match NavLink font-size */
+  font-family: inherit; /* Inherit font from body/navbar */
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-button-logout:hover {
+  background-color: #c0392b; /* Darker red */
+}
+
+/* Main content area */
+.main-content {
+  flex-grow: 1; /* Allows content to fill available space */
+  padding: 2.5rem;
+  /* Semi-transparent background for content readability over the background image */
+ 
+  margin: 2rem auto; /* Center content area with auto margins */
+  width: 90%;
+  max-width: 1200px; /* Max width for larger screens */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.main-content .welcome-message {
+  color: white ;/* Dark blue-grey, consistent with navbar */
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  
+}
+
+/* Styling for components rendered within main-content (e.g., Login, CrimeDashboard) */
+.main-content h2 { /* General h2 styling within content */
+  color: #34495e;
+  margin-top: 0; /* Remove default top margin if it's the first element */
+}
+
+/* You might want to add some responsive design considerations */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar .nav-brand {
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .navbar li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar a, .navbar .nav-button-logout {
+    display: block; /* Make links/button take full width */
+    padding: 0.8rem;
+  }
+
+  .main-content {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .main-content .welcome-message {
+    font-size: 1.8rem;
+  }
+}

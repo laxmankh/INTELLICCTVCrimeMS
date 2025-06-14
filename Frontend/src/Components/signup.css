@@ -1,0 +1,57 @@
+/* Ensure html and body allow for full-height centering and set a base */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Or your preferred font */
+  background-color: #f0f2f5;    /* Light background for the page */
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* Apply box-sizing to all elements */
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center;    /* Vertically center content */
+  min-height: 100vh;      /* Make container at least full viewport height */
+  padding: 20px;          /* Add some space from screen edges, useful for responsiveness */
+}
+
+.signup-box {
+  background-color: #ffffff; /* White background for the form box */
+  padding: 30px 40px;        /* Inner spacing: top/bottom padding affects height, left/right for width */
+  border-radius: 8px;        /* Optional: rounded corners for a modern look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+  width: 100%;               /* Makes the box responsive within its container */
+  max-width: 400px;          /* Reduced maximum width. Adjust this value as needed. */
+  /*
+    Height is automatically determined by the content (title, form fields, button) and padding.
+    This is generally the best approach for forms to accommodate varying content lengths.
+    To "reduce height" effectively:
+    1. Adjust the top/bottom padding (e.g., `padding: 20px 40px;`).
+    2. Reduce margins between elements inside the .signup-box.
+    3. If you need to cap the height explicitly, you could use `max-height`
+       along with `overflow-y: auto;` to allow scrolling if content exceeds it.
+       Example:
+       max-height: 550px;
+       overflow-y: auto;
+  */
+}
+
+/* Optional: Ensure the H2 title within the signup box is centered */
+.signup-box h2 {
+  text-align: center;
+  margin-top: 0; /* Remove default browser margin if needed */
+  margin-bottom: 25px; /* Space below the title */
+}
+
+/* You would add/modify other styles for .form-group, input, button, .message etc. here
+   to fit the new dimensions and desired look and feel. For example: */
+.form-group input,
+.form-group select,
+.signup-button {
+  width: 100%; /* Make form elements and button take full width of .signup-box */
+}

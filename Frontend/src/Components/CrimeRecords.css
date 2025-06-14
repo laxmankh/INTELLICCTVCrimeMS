@@ -1,0 +1,64 @@
+.crime-container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .crime-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .crime-table th, .crime-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .crime-table th {
+    background: #007bff;
+    color: white;
+  }
+  
+  .crime-table tr:nth-child(even) {
+    background: #f2f2f2;
+  }
+  
+  .crime-table tr:hover {
+    background: #ddd;
+  }
+
+/* Styles for CrimeDashboard elements to have white text */
+/* This assumes CrimeDashboard.jsx's root element has className="crime-dashboard" */
+
+/* For "Crime Dashboard" h1 */
+.crime-dashboard > h1 {
+  color: white;
+}
+
+/* For "Past Crime Records", "Live Crime Map" h2 */
+.crime-dashboard div > h2 { /* Targets h2 within the conditional view divs */
+  color: white;
+}
+
+/* For "Crime Distribution by Type (Pie)", "Crime Count by Location (Bar Chart)" h3 */
+.crime-dashboard div > h3 { /* Targets h3 within the conditional view divs */
+  color: white;
+}
+
+/* For XAxis labels in Recharts (e.g., location names like "Pimpri, Pune") */
+.recharts-cartesian-axis-tick-value tspan {
+  fill: white !important; /* SVG text uses 'fill'. !important may be needed to override Recharts inline styles */
+}
+
+/* For Legend text in Recharts (e.g., "Number of Crimes") */
+.recharts-legend-item-text {
+  color: white !important; /* Legend items are often HTML. !important to override Recharts inline styles */
+}
+  
