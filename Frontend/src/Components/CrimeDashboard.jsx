@@ -28,7 +28,7 @@ const CrimeDashboard = () => {
         setLoading(true);
         setError(null);
         const response = await axios.get(
-          "http://localhost:3000/api/records/crimerecords"
+          "https://intellicctvcrimems.onrender.com"
         );
         setAllCrimeRecords(response.data);
       } catch (err) {
