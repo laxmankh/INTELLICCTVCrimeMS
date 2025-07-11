@@ -42,7 +42,7 @@ const Signup = () => {
 
     try {
       // API call to your backend
-      const response = await axios.post('http://localhost:3000/api/auth/signup', formData);
+      const response = await axios.post('https://intellicctvcrimems.onrender.com', formData);
 
       // Handle successful signup
       Swal.fire({
