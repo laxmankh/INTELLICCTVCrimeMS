@@ -25,7 +25,7 @@ const Login = ({ setIsLoggedIn }) => {
 
       try {
         // API endpoint for login
-        const apiUrl = `http://localhost:3000/api/auth/login`;
+        const apiUrl = `https://intellicctvcrimems.onrender.com`;
         // Data to be sent in the request body
         // NOTE: Standard login typically only requires email/password.
         // The user's role is usually determined by the backend AFTER successful authentication.
